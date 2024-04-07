@@ -1,4 +1,21 @@
-## Write notes here.
+## Build and run locally
+
+```
+git clone https://github.com/beacloudgenius/lms.git
+cd lms
+cp .env.example .env
+npm i
+make dev
+visit http://localhost:3000
+```
+
+# Setup HTTPS and cloudflare tunnel
+
+Tunnel at https://dev.thecloudseminar.com points to localhost:3000
+
+See `cloudflared-tunnel.md`
+
+## Notes
 
 npx supabase migration new watches
 
