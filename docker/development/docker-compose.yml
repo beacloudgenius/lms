@@ -1,0 +1,22 @@
+---
+services:
+  with-docker-multi-env-development:
+    build:
+      context: ../../
+      dockerfile: docker/development/Dockerfile
+    image: with-docker-multi-env-development
+    container_name: dev
+    ports:
+      - 3000:3000
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.next.rule=Host(`next.i.cloudgenius.app`)
+      - traefik.http.routers.next.service=next
+      - traefik.http.services.next.loadbalancer.server.port=3000
+      - traefik.http.routers.next.entrypoints=https
+      - traefik.http.routers.next.tls=true
+networks:
+  traefik:
+    external: true

@@ -1,0 +1,16 @@
+---
+services:
+  cloudflared:
+    container_name: dev-tunnel
+    image: erisamoe/cloudflared
+    command: tunnel --no-autoupdate run dev
+    restart: always
+    environment:
+      REAL_IP_HEADER: Cf-Connecting-Ip
+    volumes:
+      - $PWD/cloudflared:/etc/cloudflared
+    networks:
+      - traefik
+networks:
+  traefik:
+    external: true
