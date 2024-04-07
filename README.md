@@ -11,8 +11,17 @@ visit http://localhost:3000
 
 ## Build and run locally in docker
 
+Start docker
+
 ```
 make start-dev
+
+```
+
+Stop docker
+
+```
+make stop-dev
 ```
 
 # Setup HTTPS and cloudflare tunnel
