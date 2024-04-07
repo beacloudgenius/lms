@@ -9,6 +9,12 @@ make dev
 visit http://localhost:3000
 ```
 
+## Build and run locally in docker
+
+```
+make start-dev
+```
+
 # Setup HTTPS and cloudflare tunnel
 
 Tunnel at https://dev.thecloudseminar.com points to localhost:3000
