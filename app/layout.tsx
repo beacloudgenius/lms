@@ -10,6 +10,7 @@ import { ModeToggle } from '@/components/mode-toggle'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
 
 const defaultUrl = process.env.NEXT_PUBLIC_URL
   ? `${process.env.NEXT_PUBLIC_URL}`
@@ -172,6 +173,23 @@ export default function RootLayout({
                     </div>
                   </Link>
                   <ModeToggle />
+                  <div className={cn(
+                    'flex items-center text-sm font-medium',
+                     ''
+                  )}>
+                    <Link href='/auth' target='' rel='noreferrer'>
+                      <div className='p-2 mx-2'>
+                      Login
+                      </div>
+                      <span className='sr-only'>Login</span>
+                    </Link>
+                    <Link href='/auth' target='' rel='noreferrer'>
+                      <div className='bg-[#CC559A] p-2 rounded-sm'>
+                      SignUp
+                      </div>
+                      <span className='sr-only'>Login</span>
+                    </Link>
+                  </div>
                 </nav>
               </div>
             </div>
