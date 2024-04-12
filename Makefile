@@ -12,7 +12,7 @@ build-dev: ## Build the development docker image.
 
 .PHONY: start-dev
 start-dev: ## Start the development docker container.
-	docker compose -f docker/development/docker-compose.yml up -d --force-recreate
+	docker compose -f docker/development/docker-compose.yml up -d --build --force-recreate
 
 .PHONY: logs-dev
 logs-dev: ## Start the development docker container.
