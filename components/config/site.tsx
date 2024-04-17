@@ -10,8 +10,8 @@ export const siteConfig = {
     // },
     { title: 'Meeting', href: '/meeting' },
     { title: 'Members', href: '/members' },
-    { title: 'Guarantee', href: '/money-back-guarantee' },
-    { title: 'Login', href: '/auth' }
+    { title: 'Guarantee', href: '/money-back-guarantee' }
+    // { title: 'Login', href: '/auth' }
   ],
   links: {
     twitter: 'https://twitter.com/LVNilesh',

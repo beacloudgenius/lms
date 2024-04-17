@@ -3,6 +3,7 @@ import React from 'react'
 import { redirect } from 'next/navigation'
 import { readUserSession } from '@/lib/auth'
 
+import Image from 'next/image'
 export default async function page() {
   // const { data } = await readUserSession()
 
@@ -16,7 +17,8 @@ export default async function page() {
         <div className='shadow-md rounded-lg px-8 py-10 max-w-lg'>
           <h3 className='text-4xl font-bold mb-5 text-center'>Money-back Guarantee</h3>
           <h3 className='text-2xl mb-5 text-center'>No questions asked</h3>
-          <img src='https://i.thecloudseminar.com/2023/02/14d-moneyback-guarantee-768x678-1.png'></img>
+          {/* <img src='https://i.thecloudseminar.com/2023/02/14d-moneyback-guarantee-768x678-1.png'></img> */}
+          <Image src='https://i.thecloudseminar.com/2023/02/14d-moneyback-guarantee-768x678-1.png' alt='moneyback-guarantee image' width={768} height={678}/>
           <p className='mb-5 text-xl'>
             All programs you purchase from us, come with a 14-day money-back guarantee.
           </p>
